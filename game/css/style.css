@@ -1,0 +1,32 @@
+/* Lumen Keeper — page chrome only. The game itself is drawn on the canvas. */
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #05070f;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+#game {
+  display: block;
+  width: min(100vw, calc(100vh * 1.6));
+  height: auto;
+  max-height: 100vh;
+  touch-action: none;
+  cursor: crosshair;
+  background: #0b1030;
+}
+
+/* Read aloud, never shown: the status line screen readers announce. */
+#status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
